@@ -18,7 +18,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 15px;
-    background: linear-gradient(180deg, #DEE8FF 42.92%, #A5BAFF 100%);
+    background: linear-gradient(180deg, #DEE8FF 75.92%, #A5BAFF 100%);
     font-family: var(--inter-font-family);
     line-height: 1.5;
     color: var(--text-color);
@@ -138,6 +138,7 @@ header {
     font-size: 96px;
     line-height: 110%;
     font-weight: 900;
+    margin-bottom: 45px;
 }
 
 .hero .hero-body>h1>span {
@@ -173,7 +174,7 @@ header {
     position: absolute;
     top: 0;
     left: 0px;
-    background-image: linear-gradient(90deg, #6999FF 0%, #0051FF 100%);
+    background-color: #6a99ff;
     height: 100%;
     width: 8px;
 }
@@ -211,12 +212,12 @@ header {
     content: "";
     position: absolute;
     top: 75px;
-    left: -105px;
+    left: -100px;
     background: url(../images/plus.svg);
     background-repeat: no-repeat;
-    background-size: 30%;
-    height: 36%;
-    width: 65%;
+    background-size: contain;
+    height: 30%;
+    width: 21%;
 }
 
 .sec-three .sec-three-body .sec-three-box>h2 {
@@ -236,8 +237,7 @@ header {
 /* end */
 
 .sec-four {
-    padding: 50px 0;
-    /* position: relative; */
+    padding: 50px 0 200px;
 }
 
 .sec-four::after {
@@ -257,7 +257,44 @@ header {
     margin: auto;
 }
 
-.sec-four .sec-four-body>h3 {
+.sec-four .slider {
+    position: relative;
+    width: 100%;
+    height: 370px;
+    overflow: hidden;
+}
+
+.sec-four .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.sec-four .slide.active {
+    opacity: 1;
+}
+
+.sec-four .fade-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.15s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.sec-four .fade-down {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.15s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.slide.active .fade-up,
+.slide.active .fade-down {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sec-four .sec-four-body h3 {
     font-size: 96px;
     line-height: 110%;
     font-weight: 900;
@@ -296,20 +333,35 @@ header {
 
 /* button */
 .btn-outline {
-    padding: 10px 20px;
-    border-radius: 0px;
+    background-image: linear-gradient(90deg, #6999FF 0%, #0051FF 100%);
+    border-radius: 57px;
     color: var(--text-color);
+    display: block;
     font-size: var(--font-size);
     font-weight: 500;
-    border: 2px solid;
+    padding: 2px;
+    position: relative;
     text-decoration: none;
-    border-image: linear-gradient(90deg, #6999FF 0%, #0051FF 100%) 1;
-    transition: all ease 0.5s;
 }
 
 .btn-outline:hover {
-    background-image: linear-gradient(90deg, #6999FF 0%, #0051FF 100%);
     color: white;
+}
+
+.btn-outline span {
+    align-items: center;
+    background: #ccdaff;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    transition: background .5s ease;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.btn-outline:hover span {
+    background: transparent;
 }
 
 /* end */
@@ -320,7 +372,7 @@ header {
     font-size: 16px;
     text-decoration: none;
     font-weight: 700;
-    color: #2c2c2c;
+    color: #0C0C0C;
     padding: 12px 23px;
     overflow: hidden;
     display: flex;
@@ -411,6 +463,26 @@ header {
 
 .button-sec a:hover .icon {
     transform: translateX(30px);
+}
+
+/* end */
+
+/* mobile button */
+.mobile-button>a {
+    display: flex;
+    gap: 15px;
+    text-decoration: none;
+    padding: 15px 16px;
+    background-image: linear-gradient(90deg, #6999FF 0%, #0051FF 100%);
+    color: #0C0C0C;
+    justify-content: space-between;
+    align-items: center;
+    width: 178px;
+    font-weight: 700;
+}
+
+.mobile-button {
+    display: none;
 }
 
 /* end */

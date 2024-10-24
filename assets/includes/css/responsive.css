@@ -3,8 +3,16 @@
         font-size: 70px;
     }
 
+    .sec-four .sec-four-body h3 {
+        font-size: 70px;
+    }
+
     .sec-three .sec-three-body .sec-three-box>h2 {
         font-size: 40px;
+    }
+
+    .sec-four .slider {
+        height: 395px;
     }
 }
 
@@ -61,21 +69,36 @@
         height: 22%;
         width: 28%;
     }
+
     .sec-four-body {
         max-width: 100%;
     }
-    .sec-four .sec-four-body>h3 {
+
+    .sec-four .sec-four-body h3 {
         font-size: 46px;
     }
 }
 
 @media (max-width: 767px) {
+    body {
+        background: linear-gradient(180deg, #DEE8FF 69.92%, #A5BAFF 100%);
+    }
+
+    .button-sec {
+        display: none;
+    }
+
+    .mobile-button {
+        display: block;
+    }
+
     .hero {
-        padding: 50px 0;
+        padding: 50px 0 35px;
     }
 
     .hero .hero-body>h1 {
         font-size: 58px;
+        margin-bottom: 25px;
     }
 
     .hero-body {
@@ -83,7 +106,7 @@
     }
 
     .sec-two {
-        padding: 50px 0px 50px;
+        padding: 35px 0px 50px;
     }
 
     .sec-two .sec-two-body,
@@ -102,7 +125,7 @@
     }
 
     .sec-three {
-        padding: 50px 0px 50px;
+        padding: 35px 0px 50px;
     }
 
     .sec-three .sec-three-body .sec-three-box>h2 {
@@ -127,8 +150,21 @@
         width: 15%;
     }
 
-    .sec-four .sec-four-body>h3 {
+    .sec-four {
+        padding: 35px 0 200px;
+    }
+
+    .sec-four .sec-four-body h3 {
         font-size: 48px;
+        line-height: 57.6px;
+    }
+
+    .sec-two .sec-two-body .sec-two-box>span {
+        line-height: 28.8px;
+    }
+
+    .sec-three .sec-three-body .sec-three-box>p {
+        line-height: 32px;
     }
 
     .sec-four-body {
@@ -142,11 +178,22 @@
     .sec-four .sec-four-body .right {
         width: 55.333%;
     }
+
     .sec-four .sec-four-body .right>p {
         font-size: 16px;
+        line-height: 25.6px;
     }
+
     .button-sec a {
         font-size: 13px;
+    }
+
+    .sec-four .sec-four-body .left h4 {
+        font-size: 25px;
+    }
+
+    .sec-four .slider {
+        height: 505px;
     }
 
     .navbar {
