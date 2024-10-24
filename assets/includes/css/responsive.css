@@ -204,3 +204,9 @@
         display: block;
     }
 }
+
+@media (min-width: 360px) {
+    .sec-four .slider {
+        height: 540px;
+    }
+}
